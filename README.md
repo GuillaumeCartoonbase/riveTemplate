@@ -1,6 +1,7 @@
 # Template Rive setup
 
 This repository contains the basic setup for a web application integrated with Rive animations.
+<br/>
 The goal of this project is to provide a foundational structure to quickly get started with Rive.
 
 - <a href= "#official-documentation">Official Documentation</a>
@@ -21,6 +22,7 @@ The goal of this project is to provide a foundational structure to quickly get s
 1. Fork the Template Repository
 
 Fork the template repository to create a copy of it in your own GitHub account for each new project.
+<br/>
 This can be done through the GitHub interface by clicking the "Fork" button on the template repository page.
 
 2. Clone the Forked Repository
@@ -56,7 +58,9 @@ git merge upstream/main
 
 6. Resolve Conflicts if Necessary
 
-If there are any conflicts between the changes in your project and the updates from the template, Git will prompt you to resolve them. After resolving conflicts, commit the merge.
+If there are any conflicts between the changes in your project and the updates from the template, Git will prompt you to resolve them.
+<br/>
+After resolving conflicts, commit the merge.
 
 ```bash
 git commit -m "Merged updates from template"
@@ -75,4 +79,5 @@ git commit -m "Merged updates from template"
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please submit a pull request.
+<br/>
 For major changes, please open an issue first to discuss what you would like to change.
