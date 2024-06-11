@@ -3,8 +3,8 @@
 This repository contains the basic setup for a web application integrated with Rive animations.
 The goal of this project is to provide a foundational structure to quickly get started with Rive.
 
-- <a href= "#official documentation">Official Documentation</a>
-- <a href= "#quick setup">Quick setup</a>
+- <a href= "#official-documentation">Official Documentation</a>
+- <a href= "#quick-setup">Quick setup</a>
   - <a href= "#installation">Installation</a>
   - <a href= "#usage">Usage</a>
 - <a href= "#contributing">Contributing</a>
