@@ -112,17 +112,9 @@ git push -u origin --tags
 
 ##### Keeping the Fork Updated
 
-To keep your forked repository (`project1`) updated with changes from the original repository (`riveTemplate`), you can add the original repository as a remote and regularly pull in changes.
+To keep your forked repository (`project1`) updated with changes from the original repository (`riveTemplate`), you can regularly pull in changes.
 
-1. Add the Original Repository as Upstream
-
-Navigate to your forked repository and add the original repository as a remote called `upstream`:
-
-```bash
-git remote add upstream https://github.com/GuillaumeCartoonbase/riveTemplate.git
-```
-
-2. Fetch and Merge Updates
+1. Fetch and Merge Updates
 
 To pull in updates from the original repository, use the following commands:
 
@@ -131,7 +123,7 @@ git fetch upstream
 git merge upstream/main
 ```
 
-3. Resolve Conflicts
+2. Resolve Conflicts
 
 If there are any conflicts, Git will prompt you to resolve them. After resolving conflicts, commit the merge:
 
