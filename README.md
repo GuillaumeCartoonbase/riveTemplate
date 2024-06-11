@@ -7,6 +7,8 @@ The goal of this project is to provide a foundational structure to quickly get s
 - <a href= "#official-documentation">Official Documentation</a>
 - <a href= "#quick-setup">Quick Setup</a>
   - <a href= "#installation">Installation</a>
+    - <a href= "#fork-method">Fork Method</a>
+    - <a href= "#clone-method">Clone Method</a>
   - <a href= "#usage">Usage</a>
 - <a href= "#contributing">Contributing</a>
 
@@ -18,6 +20,8 @@ The goal of this project is to provide a foundational structure to quickly get s
 ## Quick Setup
 
 ### Installation
+
+#### Fork Method
 
 1. Fork the Template Repository
 
@@ -61,6 +65,76 @@ git merge upstream/main
 If there are any conflicts between the changes in your project and the updates from the template, Git will prompt you to resolve them.
 <br/>
 After resolving conflicts, commit the merge.
+
+```bash
+git commit -m "Merged updates from template"
+```
+
+#### Clone Method
+
+1. Create a New Repository
+
+First, create a new repository on GitHub where you want to duplicate your existing repository.
+</br>
+Name the new repository with a new name.
+
+2. Clone the Original Repository
+
+Clone the original repository to your local machine:
+
+```bash
+git clone https://github.com/GuillaumeCartoonbase/riveTemplate.git
+```
+
+3. Rename the Remote
+
+Rename the `origin` remote to `upstream`:
+
+```bash
+git remote rename origin upstream
+```
+
+4. Add the New Repository as a Remote
+
+Add the new repository as a remote called `origin`:
+
+```bash
+git remote add origin https://github.com/yourusername/project1.git
+```
+
+5. Push to the New Repository
+
+Push all branches and tags to the new repository:
+
+```bash
+git push -u origin --all
+git push -u origin --tags
+```
+
+##### Keeping the Fork Updated
+
+To keep your forked repository (`project1`) updated with changes from the original repository (`riveTemplate`), you can add the original repository as a remote and regularly pull in changes.
+
+1. Add the Original Repository as Upstream
+
+Navigate to your forked repository and add the original repository as a remote called `upstream`:
+
+```bash
+git remote add upstream https://github.com/GuillaumeCartoonbase/riveTemplate.git
+```
+
+2. Fetch and Merge Updates
+
+To pull in updates from the original repository, use the following commands:
+
+```bash
+git fetch upstream
+git merge upstream/main
+```
+
+3. Resolve Conflicts
+
+If there are any conflicts, Git will prompt you to resolve them. After resolving conflicts, commit the merge:
 
 ```bash
 git commit -m "Merged updates from template"
