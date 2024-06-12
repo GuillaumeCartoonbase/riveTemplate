@@ -15,6 +15,10 @@ const riveInstance = new rive.Rive({
 
 		// riveInstance.setTextRunValue(textRun, newString);
 	},
+
+	onStateChange: (e) => {
+		console.log(e.data[0]); // Get the current timeline name
+	},
 });
 
 // Resize the drawing surface if the window resizes
