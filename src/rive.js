@@ -30,6 +30,7 @@ window.addEventListener(
 	false
 );
 
+// Events handling setup
 const eventFire = (riveEvent) => {
 	const eventData = riveEvent.data;
 	const eventName = eventData.name;
