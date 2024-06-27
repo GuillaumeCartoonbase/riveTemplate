@@ -6,22 +6,33 @@ const riveInstance = new rive.Rive({
 	autoplay: true,
 	stateMachines: stateMachine, // get correct stateMachine
 	automaticallyHandleEvents: true, // Automatically handle RiveHTTPEvents
-
-	onLoad: () => {
-		// Prevent a blurry canvas by using the device pixel ratio
-		riveInstance.resizeDrawingSurfaceToCanvas();
-
-		const inputs = riveInstance.stateMachineInputs(stateMachine);
-		// myInput = inputs.find((i) => i.name === inputName);
-		// myInput.value = true;
-
-		// riveInstance.setTextRunValue(textRun, newString);
-	},
-
-	onStateChange: (e) => {
-		console.log(e.data[0]); // Get the current timeline name
-	},
+	onLoad: onLoadHandler,
+	onStateChange: onStateChangeHandler,
 });
+
+// Handle the onLoad event
+const onLoadHandler = () => {
+	// Prevent a blurry canvas by using the device pixel ratio
+	riveInstance.resizeDrawingSurfaceToCanvas();
+
+	const inputs = riveInstance.stateMachineInputs(stateMachine);
+	// myInput = inputs.find((i) => i.name === "inputName");
+	// myInput.value = true;
+
+	// Text change
+	// riveInstance.setTextRunValue(textRun, newString);
+
+	// Nested inputs setup
+	//riveInstance.setNumberStateAtPath(inputName, number, path)
+	//riveInstance.setBooleanStateAtPath(inputName, boolean, path)
+	//riveInstance.fireStateAtPath(inputName, path)
+};
+
+// Handle the onStateChange event
+const onStateChangeHandler = (e) => {
+	// Custom logic for state change
+	// console.log(e.data[0]); // Get curent timeline name
+};
 
 // Resize the drawing surface if the window resizes
 window.addEventListener(
@@ -41,8 +52,3 @@ const eventFire = (riveEvent) => {
 };
 
 riveInstance.on(rive.EventType.RiveEvent, eventFire);
-
-// Nested inputs setup
-//riveInstance.setNumberStateAtPath(inputName, number, path)
-//riveInstance.setBooleanStateAtPath(inputName, boolean, path)
-//riveInstance.fireStateAtPath(inputName, path)
