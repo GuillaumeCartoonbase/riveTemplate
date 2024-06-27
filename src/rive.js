@@ -48,7 +48,20 @@ const eventFire = (riveEvent) => {
 	const eventData = riveEvent.data;
 	const eventName = eventData.name;
 	const eventProperties = eventData.properties;
-	console.log(eventName);
+
+	const eventKey = eventName;
+	switch (eventKey) {
+		case "OnHoverEnter":
+			document.body.style.cursor = "pointer";
+			break;
+		case "OnHoverExit":
+			document.body.style.cursor = "auto";
+			break;
+		default:
+			console.log("Unhandled event:", eventName, "\n", riveEvent);
+			break;
+	}
 };
 
+// Register the event handler
 riveInstance.on(rive.EventType.RiveEvent, eventFire);
